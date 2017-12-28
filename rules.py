@@ -128,8 +128,3 @@ combined_rainfall = np.fmax(rainfall_moderate, rainfall_high)
 active_flood_major = np.fmin(combined_rainfall, combined_river_level2) # AND moderate rainfall
 print("\nFlood Major: " + str(active_flood_major))
 
-"""#Rule 4 extreme -> rainfall high + river level amaran || bahaya
-combined_river_level3 = np.fmax(river_level_amaran, river_level_bahaya) # level normal OR berjaga
-#print("\nRiver_level_combined: " + str(combined_river_level))
-active_flood_extreme = np.fmin(rainfall_high, combined_river_level3) # AND moderate rainfall
-print("\nFlood Extreme: " + str(active_flood_extreme))"""
