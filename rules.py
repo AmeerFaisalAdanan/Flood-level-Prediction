@@ -8,6 +8,8 @@ CURRENT_RAINFALL = 0
 x_riverlevel = np.arange(0, 6, 1)
 x_rainfall = np.arange(0, 300, 1)
 x_floodstatus = np.arange(0, 11, 1)
+
+
 print("x_riverlevel: " + str(x_riverlevel))
 print("x_rainfall: " + str(x_rainfall))
 print("x_floodstatus"+ str(x_floodstatus))
@@ -56,7 +58,7 @@ ax.plot(x_riverlevel, riverlevel_amaran,linewidth=1.5, label='amaran')
 ax.plot(x_riverlevel, riverlevel_bahaya,linewidth=1.5, label='bahaya')
 ax.legend()
 plt.axis([0, 5, 0, 1])
-plt.show()
+#plt.show()
 
 #Rainfall
 fig, ax = plt.subplots()
@@ -66,7 +68,7 @@ ax.plot(x_rainfall, rainfall_moderate, linewidth=1.5, label='moderate')
 ax.plot(x_rainfall, rainfall_high, linewidth=1.5, label='heavy')
 ax.legend()
 plt.axis([0, 300, 0, 1])
-plt.show()
+#plt.show()
 
 #Flood Status
 fig, ax = plt.subplots()
@@ -79,3 +81,22 @@ ax.plot(x_floodstatus, flood_extreme, linewidth=1.5, label='Extreme Flood')
 ax.legend()
 plt.axis([0, 11, 0, 1])
 plt.show()
+
+#activation function for those value
+river_level_norm = fuzz.interp_membership(x_riverlevel, riverlevel_normal, CURRENT_RIVER_LEVEL)
+print("river_level_norm: " + str(river_level_norm))
+river_level_berjaga = fuzz.interp_membership(x_riverlevel, riverlevel_berjaga, CURRENT_RIVER_LEVEL)
+print("river_level_berjaga: " + str(river_level_berjaga))
+river_level_amaran = fuzz.interp_membership(x_riverlevel, riverlevel_amaran, CURRENT_RIVER_LEVEL)
+print("river_level_amaran: " + str(river_level_amaran))
+river_level_bahaya = fuzz.interp_membership(x_riverlevel, riverlevel_bahaya, CURRENT_RIVER_LEVEL)
+print("river_level_bahaya: " + str(river_level_bahaya))
+
+rainfall_low = fuzz.interp_membership(x_rainfall, rainfall_low, CURRENT_RAINFALL)
+print("rainfall_low: " + str(rainfall_low))
+rainfall_moderate = fuzz.interp_membership(x_rainfall, rainfall_moderate, CURRENT_RAINFALL)
+print("rainfall_moderate: " + str(rainfall_moderate))
+rainfall_high = fuzz.interp_membership(x_rainfall, rainfall_high, CURRENT_RAINFALL)
+print("rainfall_high: " + str(rainfall_high))
+
+results = dict()
