@@ -22,3 +22,8 @@ ax.plot(x_riverlevel, riverlevel_bahaya,linewidth=1.5, label='bahaya')
 ax.legend()
 #display the graph windows
 plt.show()
+
+
+
+#Rules evaluation
+
