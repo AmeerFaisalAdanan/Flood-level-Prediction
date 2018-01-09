@@ -1,10 +1,16 @@
 import numpy as np
 import skfuzzy as fuzz
 import matplotlib .pyplot as plt
+import sys
 
 
 CURRENT_RIVER_LEVEL = 3
 CURRENT_RAINFALL = 100
+
+##using input
+#CURRENT_RIVER_LEVEL = float(input("Enter current river level: "))
+#CURRENT_RAINFALL = float(input("Enter current rainfall: "))
+
 x_riverlevel = np.arange(0, 6, 1)
 x_rainfall = np.arange(0, 300, 1)
 x_floodstatus = np.arange(0, 10, 1)
@@ -171,7 +177,7 @@ print("\nFlood Status: " + str(flood_stats))
 #print("\nFlood Status: " + str(flood_stats2))
 #print("\nFlood Status: " + str(flood_stats3))
 #print("\nFlood Status: " + str(flood_stats4))
-
+plt.show()
 
 if flood_stats >0:
     if flood_stats <=2:
