@@ -4,8 +4,8 @@ import matplotlib .pyplot as plt
 import sys
 
 
-CURRENT_RIVER_LEVEL = 3
-CURRENT_RAINFALL = 100
+CURRENT_RIVER_LEVEL = 4
+CURRENT_RAINFALL = 288
 
 ##using input
 #CURRENT_RIVER_LEVEL = float(input("Enter current river level: "))
@@ -73,7 +73,7 @@ ax.plot(x_riverlevel, riverlevel_berjaga,linewidth=1.5, label='berjaga')
 ax.plot(x_riverlevel, riverlevel_amaran,linewidth=1.5, label='amaran')
 ax.plot(x_riverlevel, riverlevel_bahaya,linewidth=1.5, label='bahaya')
 ax.legend()
-plt.axis([0, 5, 0, 2])
+plt.axis([0, 5, 0, 1])
 #plt.show()
 
 #Rainfall
@@ -84,7 +84,7 @@ ax.plot(x_rainfall, rainfall_low, linewidth=1.5, label='low')
 ax.plot(x_rainfall, rainfall_moderate, linewidth=1.5, label='moderate')
 ax.plot(x_rainfall, rainfall_high, linewidth=1.5, label='heavy')
 ax.legend()
-plt.axis([0, 300, 0, 2])
+plt.axis([0, 300, 0, 1])
 #plt.show()
 
 #Flood Status
@@ -97,7 +97,7 @@ ax.plot(x_floodstatus, flood_moderate, linewidth=1.5, label='Moderate Flood')
 ax.plot(x_floodstatus, flood_major, linewidth=1.5, label='Major Flood')
 """ax.plot(x_floodstatus, flood_extreme, linewidth=1.5, label='Extreme Flood')"""
 ax.legend()
-plt.axis([0, 10, 0, 2])
+plt.axis([0, 10, 0, 1])
 #plt.show()
 
 ################################################################################################################################
